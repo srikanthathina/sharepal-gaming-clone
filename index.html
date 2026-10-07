@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SharePal Gaming Gadgets Clone</title>
+    <link rel="preconnect" href="https://sharepal.in" />
+    <link rel="preconnect" href="https://images.sharepal.in" />
+    <link rel="stylesheet" href="./styles.css?v=4" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="#" aria-label="SharePal home">
+            <span>Share</span><strong>Pal</strong>
+          </a>
+
+          <nav class="top-nav" aria-label="Primary navigation">
+            <a href="#">Photography</a>
+            <a class="active" href="#" data-section="gaming">Gaming</a>
+            <a href="#" data-section="outdoor">Outdoor</a>
+            <a href="#" data-section="entertainment">Entertainment</a>
+          </nav>
+
+          <div class="header-actions">
+            <button class="city-button" type="button">
+              <span class="icon">⌖</span>
+              Bangalore
+              <span class="chevron">⌄</span>
+            </button>
+            <button class="account-button" type="button" aria-label="Open account">♙</button>
+          </div>
+        </div>
+
+        <div class="date-strip" aria-label="Rental dates">
+          <button class="date-cta" type="button" data-open-duration>
+            <span class="calendar-icon">◴</span>
+            <span>Select Rental Dates</span>
+          </button>
+          <button class="select-button" type="button" data-open-duration>
+            <span class="calendar-icon">◴</span>
+            Select
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-section" aria-labelledby="hero-title">
+          <div class="hero-tabs" aria-label="Super categories">
+            <button type="button">‹</button>
+            <a class="selected" href="#" data-section="gaming">Gaming</a>
+            <a href="#" data-section="outdoor">Outdoor</a>
+            <a href="#" data-section="entertainment">Entertainment</a>
+            <button type="button">›</button>
+          </div>
+
+          <div class="hero-panel">
+            <div class="hero-copy">
+              <p class="eyebrow" id="hero-eyebrow">Zero deposit rentals</p>
+              <h1 id="hero-title">Gaming Consoles</h1>
+              <p id="hero-description">Rent the latest gaming gadgets from <b>SharePal</b> PS5, Xbox, Oculus VR, Racing Wheel on rent.</p>
+              <div class="brand-row" aria-label="Supported brands">
+                <span>Xbox</span>
+                <span>PS5</span>
+                <span>Meta</span>
+              </div>
+            </div>
+            <img
+              class="hero-product"
+              id="hero-image"
+              src="https://sharepal.in/_next/image?url=https%3A%2F%2Fimages.sharepal.in%2Fsuper-categories%2Fgaming-right.webp&w=640&q=75"
+              alt="Gaming console and VR headset"
+            />
+          </div>
+        </section>
+
+        <section class="catalog-shell" aria-labelledby="catalog-title">
+          <aside class="category-rail" aria-label="Product categories">
+            <button class="rail-item active" type="button" data-filter="All">
+              <img src="https://sharepal.in/_next/image?url=https%3A%2F%2Fimages.sharepal.in%2Fmisc%2Fhard-coded%2Fsharepal%2FProduct%3DAll%2520Products.webp&w=256&q=75" alt="" />
+              <span>All</span>
+            </button>
+            <button class="rail-item" type="button" data-filter="GTA VI">
+              <img src="https://sharepal.in/_next/image?url=https%3A%2F%2Fimages.sharepal.in%2Fcategory-icons%2Fgta-vi.webp&w=256&q=75" alt="" />
+              <span>GTA VI</span>
+            </button>
+            <button class="rail-item" type="button" data-filter="PS5">
+              <img src="https://sharepal.in/_next/image?url=https%3A%2F%2Fimages.sharepal.in%2Fsub-category-card%2Fps5-console-on-rent-sharepal.webp&w=256&q=75" alt="" />
+              <span>PS5 Console</span>
+            </button>
+            <button class="rail-item" type="button" data-filter="Xbox">
+              <img src="https://sharepal.in/_next/image?url=https%3A%2F%2Fimages.sharepal.in%2Fsub-category-card%2Fxbox-console-on-rent-sharepal.webp&w=256&q=75" alt="" />
+              <span>Xbox Console</span>
+            </button>
+            <button class="rail-item" type="button" data-filter="VR">
+              <img src="https://sharepal.in/_next/image?url=https%3A%2F%2Fimages.sharepal.in%2Fsub-category-card%2Fvr-on-rent-sharepal.webp&w=256&q=75" alt="" />
+              <span>VR</span>
+            </button>
+          </aside>
+
+          <div class="catalog-content">
+            <div class="catalog-heading">
+              <h2 id="catalog-title">Gaming Gadgets On Rent</h2>
+              <span id="result-count">50 items</span>
+            </div>
+
+            <div class="mobile-filter-row" id="mobile-filter-row"></div>
+
+            <div class="product-grid" id="product-grid"></div>
+            <button class="show-more" type="button" id="show-more">Show More</button>
+          </div>
+        </section>
+
+        <section class="benefits-section" aria-labelledby="benefits-title">
+          <div class="section-heading">
+            <p class="eyebrow">Key Benefits</p>
+            <h2 id="benefits-title">Rent premium gear without ownership drag</h2>
+          </div>
+          <div class="benefit-grid">
+            <article>
+              <span class="benefit-icon">✓</span>
+              <h3>Zero Deposit</h3>
+              <p>Book premium consoles and accessories without a heavy refundable deposit.</p>
+            </article>
+            <article>
+              <span class="benefit-icon">↔</span>
+              <h3>Flexible Tenure</h3>
+              <p>Pick dates, extend rentals, and pay only for the chargeable usage period.</p>
+            </article>
+            <article>
+              <span class="benefit-icon">⌂</span>
+              <h3>Doorstep Delivery</h3>
+              <p>Delivery and pickup are handled at your address across Bangalore.</p>
+            </article>
+            <article>
+              <span class="benefit-icon">★</span>
+              <h3>Quality Checked</h3>
+              <p>Every device is cleaned, verified, and packed for a ready-to-play experience.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="faq-section" aria-labelledby="faq-title">
+          <h2 id="faq-title">Frequently Asked Questions (FAQs)</h2>
+          <div class="faq-list" id="faq-list"></div>
+          <button class="ghost-button" type="button">View more FAQ's</button>
+        </section>
+
+        <section class="reviews-section" aria-labelledby="reviews-title">
+          <h2 id="reviews-title">Served more than 1 Lakh Orders</h2>
+          <div class="review-track" id="review-track"></div>
+          <div class="stats-row">
+            <div><strong>250Cr+</strong><span>Saved Together</span></div>
+            <div><strong>4.5M Kg</strong><span>CO₂e Emissions Saved</span></div>
+            <div><strong>100K+</strong><span>Products In Circulation</span></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="seo-copy">
+          <h2>Renting from SharePal in Bangalore</h2>
+          <p>
+            Discover the convenience of renting from SharePal, your trusted partner in Bangalore for cameras, gaming consoles,
+            projectors, speakers, trekking gear, riding gear, and creator gear. Flexible rental tenures and doorstep service keep
+            the experience simple from booking to pickup.
+          </p>
+        </div>
+
+        <div class="footer-grid">
+          <div>
+            <h3>Sharepal</h3>
+            <a href="#">About</a>
+            <a href="#">Why SharePal</a>
+            <a href="#">Sitemap</a>
+            <a href="#">CarePal</a>
+          </div>
+          <div>
+            <h3>Become a Pal</h3>
+            <a href="#">Sharepal for Creators</a>
+            <a href="#">Careers</a>
+            <a href="#">Sharepal for Brands</a>
+            <a href="#">Rent Your Gear</a>
+          </div>
+          <div>
+            <h3>Information</h3>
+            <a href="#">How it works?</a>
+            <a href="#">FAQs</a>
+            <a href="#">Verification</a>
+            <a href="#">Cancellation Policy</a>
+          </div>
+          <div>
+            <h3>Need Help</h3>
+            <button class="support-button" type="button">Contact Support</button>
+            <a href="mailto:care@sharepal.in">care@sharepal.in</a>
+            <div class="socials" aria-label="Social links">
+              <span>f</span><span>◎</span><span>in</span>
+            </div>
+          </div>
+        </div>
+        <button class="go-up" type="button">Go up ^</button>
+        <p class="copyright">© 2026. SWNAC E-Kiraya Services Pvt Ltd</p>
+      </footer>
+
+      <button class="floating-date" type="button" data-open-duration>
+        <span>◴</span>
+        Select rental dates to view prices
+      </button>
+
+      <button class="chat-bubble" type="button" aria-label="Open chatbot">•••</button>
+
+      <nav class="bottom-nav" aria-label="Mobile navigation">
+        <a href="#"><span>⌂</span>Home</a>
+        <a href="#"><span>▦</span>Category</a>
+        <a href="#"><span>⌕</span>Search</a>
+        <a href="#" data-open-cart><span>♜</span>Cart <strong class="cart-count">0</strong></a>
+      </nav>
+    </div>
+
+    <div class="modal-backdrop" id="duration-modal" aria-hidden="true">
+      <section class="duration-modal" role="dialog" aria-modal="true" aria-labelledby="duration-title">
+        <button class="modal-close" type="button" data-close-duration aria-label="Close">×</button>
+        <h2 id="duration-title">Select your Dates</h2>
+        <div class="date-form">
+          <label>
+            Delivery Date *
+            <button type="button">Select delivery date <span>⌄</span></button>
+          </label>
+          <label>
+            Pickup Date *
+            <button type="button">Select pickup date <span>⌄</span></button>
+          </label>
+        </div>
+        <div class="rental-summary">
+          <div><span>Your Rental Period:</span><strong>00 Day</strong></div>
+          <div><span>Chargeable Period:</span><strong>--</strong></div>
+        </div>
+        <div class="savings-note">
+          <strong>Save more with us!</strong>
+          <p>Longer rental periods mean bigger savings. Delivery and pickup days are not charged.</p>
+        </div>
+        <div class="calendar-grid" aria-label="Example calendar">
+          <h3>October 2026</h3>
+          <div class="weekdays"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+          <div class="days" id="calendar-days"></div>
+        </div>
+        <button class="continue-button" type="button" disabled>Continue</button>
+      </section>
+    </div>
+
+    <div class="drawer-backdrop" id="product-drawer" aria-hidden="true">
+      <aside class="product-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+        <button class="modal-close" type="button" data-close-product aria-label="Close">×</button>
+        <img id="drawer-image" src="" alt="" />
+        <span class="badge" id="drawer-badge">Trending</span>
+        <h2 id="drawer-title"></h2>
+        <p id="drawer-description"></p>
+        <div class="drawer-price">
+          <span>Select Dates to view price</span>
+          <strong>₹ N/A</strong>
+        </div>
+        <div class="duration-options">
+          <button type="button">3 Days</button>
+          <button type="button">7 Days</button>
+          <button type="button">15 Days</button>
+          <button type="button">30 Days</button>
+        </div>
+        <button class="cart-button wide" type="button" id="drawer-add-cart">Add to Cart</button>
+      </aside>
+    </div>
+
+    <div class="drawer-backdrop" id="cart-drawer" aria-hidden="true">
+      <aside class="product-drawer cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <button class="modal-close" type="button" data-close-cart aria-label="Close">×</button>
+        <h2 id="cart-title">Your Cart</h2>
+        <p class="cart-subtitle">Rental estimate for 3 days. You can adjust exact dates before checkout.</p>
+        <div class="cart-list" id="cart-list"></div>
+        <div class="cart-empty" id="cart-empty">
+          <strong>Your cart is empty</strong>
+          <p>Add a product from the rental cards to see it here.</p>
+        </div>
+        <div class="cart-summary">
+          <div><span>Items</span><strong id="cart-items-count">0</strong></div>
+          <div><span>Estimated total</span><strong id="cart-total">₹0</strong></div>
+        </div>
+        <button class="cart-button wide" type="button" data-open-duration>Proceed with dates</button>
+      </aside>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -16,22 +16,22 @@ Responsive static recreation of the SharePal Bangalore gaming gadgets rental lis
 3. Right-click `index.html`.
 4. Choose "Open with Live Server".
 
-NPM command:
+Build command:
 
 ```bash
-npm start
+npm run build
+```
+
+Run locally:
+
+```bash
+python -m http.server 5247
 ```
 
 Then open:
 
 ```text
 http://127.0.0.1:5247
-```
-
-Alternative terminal command:
-
-```bash
-python -m http.server 5247
 ```
 
 Then open:
@@ -44,4 +44,4 @@ http://127.0.0.1:5247
 
 This is a static site, so you can deploy the folder as-is to Netlify, Vercel, GitHub Pages, or any static hosting provider.
 
-For Vercel, the included `vercel.json` forces Vercel to serve the static `index.html`, CSS, and JavaScript files directly. The local `server.mjs` file is only for running the project with `npm start` on your computer.
+For Vercel, the included `vercel.json` runs `npm run build` and serves the generated static `dist/` folder.

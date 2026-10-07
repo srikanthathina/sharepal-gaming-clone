@@ -42,4 +42,6 @@ http://127.0.0.1:5247
 
 ## Deploy
 
-This is a static site, so you can deploy the folder as-is to Netlify, Vercel, GitHub Pages, or any static hosting provider. Set the publish directory to this folder and keep `index.html` as the entry point.
+This is a static site, so you can deploy the folder as-is to Netlify, Vercel, GitHub Pages, or any static hosting provider.
+
+For Vercel, the included `vercel.json` forces Vercel to serve the static `index.html`, CSS, and JavaScript files directly. The local `server.mjs` file is only for running the project with `npm start` on your computer.
